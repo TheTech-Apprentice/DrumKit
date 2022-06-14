@@ -1,0 +1,25 @@
+This chatbox connects to the port 8818 and outputs a message in the console that it is waiting for a connection. Once a connection is established through telnet, the console tells you that the server is connected to the client. 
+
+In the terminal  the client will be asked for an ID to be submitted. If the ID is already used, it will send out and invalid message and ask for a new  ID until there are not two clients with the same ID. 
+
+The ArrayList for the ID names is Synchronized so that there are no repeated names. There is also the use of Reentrant locks in the ArrayList so that the thread runs better. 
+
+This chats will also broadcast a LOGGED OUT message to all remaining users when one user leaves. The remaining users will still be able to receive/ send messages and log off.
+
+
+Commands:
+
+Login: SUBMIT ID NAME
+
+
+Once you input a user name correctly:
+“NameAccepted” user
+[ONLINE] user
+
+Broadcast message to all users,
+
+Type message:  MESSAGE [User] <body>
+
+Receive: MESSAGE [User] <body>
+
+Logoff Type: “logoff”
